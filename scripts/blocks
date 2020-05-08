@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# blocks: display colorblocks
+#
+# same layout as seen in fetch/neofetch
+
+printf "\e[30m█████\e[031m█████\e[032m█████\e[033m█████"
+printf "\e[034m█████\e[035m█████\e[036m█████\e[037m█████\n"
+printf "\e[01m\e[30m█████\e[031m█████\e[032m█████\e[033m█████"
+printf "\e[034m█████\e[035m█████\e[036m█████\e[037m█████\n"

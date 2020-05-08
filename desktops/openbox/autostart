@@ -1,0 +1,6 @@
+# autostart
+#
+# for openbox
+
+/home/void/.config/polybar/launch.sh &
+wal -R

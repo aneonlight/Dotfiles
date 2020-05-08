@@ -1,0 +1,9 @@
+# keys: feh keybindings
+#
+# see also feh(1)
+
+
+# remove previous binding 
+# set f for fullscreen
+save_filelist 
+toggle_fullscreen f

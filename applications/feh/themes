@@ -1,0 +1,9 @@
+# themes: feh configuration
+#
+# see also feh(1)
+
+
+# set background to black, 
+# hide cursor, 
+# auto fullscreen
+feh -B black -Y -F

@@ -1,0 +1,47 @@
+! .Xdefaults: global X settings
+!
+! see also urxvt(1)
+
+
+! xft settings
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintsyle: hintslight
+
+
+! general 
+URxvt.depth: 24 ! set to 24 to prevent lag in i3
+URxvt.geometry: 65x20 ! default terminal size upon creation
+URxvt.fading: 0 ! disable terminal fading when not in focus
+URxvt.iconFile: /usr/share/icons/Papirus/64x64/apps/Terminal.svg ! set icon for urxvt
+
+URxvt*transparent: false
+URxvt*scrollBar: false
+URxvt*saveLines: 1000
+
+! for source code pro
+!URxvt.font: xft:Source Code Pro:style=Regular:size=10,xft\
+!	:Source Han Sans:style=Regular:size=9
+
+! for office code pro
+URxvt.font: xft:Office Code Pro:style=Regular:size=11, xft\
+	:Source Han Sans:style=Regular:size=9
+! prevent letters from having abnormal spacing
+URxvt*letterSpace: -1
+
+
+! misc 
+! do not scroll with new output if looking at history
+URxvt*scrollTtyOutput: false 
+! scroll in relation to point in history
+URxvt*scrollWithBuffer: true 
+! move scroll with keypress
+URxvt*scrollTtyKeypress: True
+
+! disable ctrl+shift iso mode 
+URxvt.iso14755: false
+
+
+! extensions
+URxvt.perl-ext-common: default

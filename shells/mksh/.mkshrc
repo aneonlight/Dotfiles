@@ -1,0 +1,31 @@
+# .mkshrc: mksh configuration
+#
+# see also mksh(1)
+
+
+# system variables
+export LANG=en_US.utf8
+export EDITOR=vim
+export PAGER=less
+
+# set prompt (ie.[user λ ])
+export PS1=$(print '\033[34m${USER:=$(id -un)}\033[0m λ ')
+
+# disble less history
+export LESSHISTFILE=-
+
+# add per user installations to path
+export PATH=$PATH:~/Source/dot/scripts
+export PATH=$PATH:~/.local/bin
+
+# enable colors
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# pfetch config
+alias pfetch='clear; pfetch'
+export PF_INFO="ascii title os host \
+    pkgs shell editor memory"
+
+# set colorscheme
+(cat ~/.cache/wal/sequences &)

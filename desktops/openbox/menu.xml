@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-accessories-menu" label="Accessories">
+    <item label="Ark File Archiver">
+    <action name="Execute">
+      <command>ark</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Leafpad">
+    <action name="Execute">
+      <command>leafpad</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>    
+  <item label="Character Map">
+    <action name="Execute">
+      <command>kcharselect</command>
+    </action>
+  </item>
+  <separator />
+  <item label="Hydrus">
+    <action name="Execute">
+       <command>/home/void/.local/bin/client</command>
+    </action>
+  </item> 
+  <item label="Xterm">
+    <action name="Execute">
+       <command>xterm</command>
+    </action>
+  </item> 
+ </menu>
+
+<menu id="apps-multimedia-menu" label="Media">
+  <item label="Cantata">
+    <action name="Execute">
+      <command>cantata</command>
+    </action>
+  </item>
+  <item label="Vlc">
+    <action name="Execute">
+	    <command>vlc</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+  <separator />
+   <item label="Geeqie">
+    <action name="Execute">
+      <command>geeqie</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item> 
+  <item label="Transmission">
+    <action name="Execute">
+      <command>transmission</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+    </item>  
+    <separator />
+    <item label="Handbrake">
+    <action name="Execute">
+      <command>ghb</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="system-menu" label="System">
+  <item label="Audio Settings">
+    <action name="Execute">
+      <command>pavucontrol</command>
+    </action>
+  </item><item label="Openbox Configuration Manager">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="GTK Settings">
+    <action name="Execute">
+      <command>lxappearance</command>
+    </action>
+  </item>
+  <item label="Tint Settings">
+    <action name="Execute">
+      <command>tint2conf</command>
+    </action>
+  </item><separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Applications" />
+  <item label="Rxvt Unicode">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>  
+  <item label="File Manager">
+    <action name="Execute">
+      <command>pcmanfm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+ <item label="Firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+ <menu id="apps-accessories-menu"/>
+  <menu id="apps-graphics-menu"/>
+  <menu id="apps-multimedia-menu"/>
+  <item label=""></item>
+  <menu id="system-menu"/>
+  <separator />
+  <item label="Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

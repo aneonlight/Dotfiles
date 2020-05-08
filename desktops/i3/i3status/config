@@ -1,0 +1,33 @@
+# config: i3statusbar configuration
+#
+# see alsoo i3status(1)
+
+
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "disk /"
+order += "wireless wlp0s29f7u2"
+order += "ethernet eth0"
+order += "tztime local"
+
+wireless wlp0s29f7u2 {
+    format_up = "W: (%quality at %essid, %bitrate) %ip"
+    format_down = "W: down"
+}
+
+ethernet eth0 {
+    format_up = "E: %ip"
+    format_down = "E: down"
+}
+
+tztime local {
+    format = "%A, %b %_d %Y %_I:%M %p"
+}
+
+disk "/" {
+    format = "%free free on ROOT "
+}

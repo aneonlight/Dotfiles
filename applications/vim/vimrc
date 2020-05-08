@@ -1,0 +1,29 @@
+" .vimrc: vim configuration
+"
+" see also vim (:help vimrc)
+
+
+syntax enable " enable syntax processing
+set tabstop=4 " number of visual spaces per TAB
+set softtabstop=4 " number of spaces in tab when editing
+set expandtab " tabs are spaces
+set shiftwidth=4 " indents are 4 spaces
+set number " show line numbers
+set showcmd " show command in bottom bar
+set cursorline " highlight current line
+
+set wildmenu " visual autocoplete for commands
+set lazyredraw " redraw only when needed
+set showmatch " highlight matching [{()}]
+
+set splitbelow " split order
+set splitright
+
+set incsearch " search as character are entered
+set viminfo= " disable viminfo
+
+" use :w!! to save file as sudo if vim not opened in sudo
+cmap w!! w !sudo tee > /dev/null % 
+
+" use custom colorscheme
+colorscheme custom

@@ -1,0 +1,123 @@
+[colors]
+
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+muted = ${xrdb:color8:#222}
+
+
+[bar/bar]
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+width = 100%
+height = 30
+line-size = 0
+padding-right = 5
+padding-left = 4
+border-bottom-size = 0
+
+fixed-center = true
+font-0 = IBM Plex Sans:size=8;1
+font-1 = MaterialIcons:size=10;2
+font-2 = Source Han Sans:size=8;1
+
+modules-left = powermenu ewmh
+modules-center = title
+modules-right = date
+module-margin = 2
+
+format-underline = ${colors.primary}
+format-overline = ${colors.secondary}
+
+offset-x = 0
+offset-y = 0
+
+[bar/tray]
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+width = 30%
+height = 30
+line-size = 0
+border-bottom-size = 0
+
+offset-y = 0
+offset-x = 63%
+
+font-0 = IBM Plex Sans:size=8;1
+font-1 = MaterialIcons:size=10;2
+
+modules-right= mpd pavolume
+
+override-redirect = true
+tray-position = right
+tray-padding = 0
+tray-background = ${colors.background}
+
+[module/title]
+type = internal/xwindow
+
+[module/date]
+type = internal/date
+date =  %a, %b %d %l:%M %P 
+
+[module/mpd]
+type = internal/mpd
+format-online =  <label-song>
+format-stopped = No Song Currently Playing
+
+foreground = ${colors.primary}
+
+label-song-maxlen = 40
+label-offline = Mpd Is Currently Offline
+
+format-online-padding = 1
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+
+exec = ~/.config/polybar/pavolume.sh listen
+click-left = ~/.config/polybar/pavolume.sh togmute
+click-right = exec pavucontrol &
+scroll-up = ~/.config/polybar/pavolume.sh up
+scroll-down = ~/.config/polybar/pavolume.sh down
+
+label-padding = 2
+label-foreground = ${colors.foreground}
+
+[module/powermenu]
+type = custom/script
+
+exec = echo "  "
+click-left = rofi -modi run,drun,window -show drun
+format-padding = 1
+
+[module/ewmh]
+type = internal/xworkspaces
+enable-click = true
+
+label-active = %name%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background}
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.alert}
+
+label-empty= %name%
+label-empty-foreground = ${colors.secondary}
+label-empty-background = ${colors.background}
+
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
+
+; vim:ft=dosini
