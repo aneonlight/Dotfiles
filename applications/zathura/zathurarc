@@ -1,0 +1,15 @@
+# zathurarc: zathura's configuration
+#
+# see also zathurarc(5)
+
+
+set font "Source Sans Pro 10"
+set smooth-scroll true              # make mouse scrolling smooth
+set window-title-home-tilde true    # shorten home directory to a ~
+set statusbar-basename true         # only show the file name in the status bar (not the path)
+set selection-clipboard clipboard   # allow for C^v to paste selection (instead of middle click)
+
+# set f to toggle fullscreen
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
