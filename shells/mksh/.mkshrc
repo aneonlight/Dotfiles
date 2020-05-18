@@ -5,7 +5,7 @@
 
 # system variables
 export LANG=en_US.utf8
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 # set prompt (ie.[user λ ])
@@ -17,6 +17,7 @@ export LESSHISTFILE=-
 # add per user installations to path
 export PATH=$PATH:~/Source/dot/scripts
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.emacs.d/bin
 
 # enable colors
 alias ls='ls --color=auto'

@@ -1,0 +1,53 @@
+# bindings: ncmpcpp key bindings
+#
+# see also ncmpcpp(1)
+
+
+def_key "="
+    volume_up
+def_key "-"
+    volume_down
+
+def_key "j"
+    scroll_down
+def_key "k"
+    scroll_up
+def_key "h"
+    previous_column
+def_key "l"
+    next_column
+
+def_key "K"
+    next_screen
+def_key "J"
+    previous_screen
+
+def_key "ctrl-u"
+    page_up
+def_key "ctrl-d"
+    page_down
+
+def_key "g"
+    move_home
+def_key "G"
+    move_end
+
+def_key "/"
+    find
+def_key "/"
+    find_item_forward
+
+def_key "n"
+    next_found_item
+def_key "N"
+    previous_found_item
+
+# remap them as I like the media library view
+def_key "2"
+    show_media_library
+def_key "2"
+    toggle_media_library_columns_mode
+def_key "4"
+    show_browser
+def_key "4"
+    change_browse_mode
